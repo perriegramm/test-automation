@@ -1,5 +1,6 @@
 package framework.driver;
 
+import framework.config.Config;
 import org.openqa.selenium.WebDriver;
 
 public class DriverManager {
@@ -15,6 +16,10 @@ public class DriverManager {
             throw new IllegalStateException("WebDriver is not initialized. Call DriverManager.initDriver(...) first.");
         }
         return driver;
+    }
+
+    public static void initDriver() {
+        initDriver(Config.browser());
     }
 
     public static void initDriver(BrowserType browserType) {
