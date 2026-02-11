@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class ChromeOptionsFactory {
 
     private ChromeOptionsFactory() {
-        // Blokuje tworzenie instancji - klasa utility
+        // utility class
     }
 
     public static ChromeOptions createDefault() {
