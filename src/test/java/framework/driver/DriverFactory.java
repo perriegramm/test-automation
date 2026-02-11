@@ -10,7 +10,6 @@ import java.util.Objects;
 public class DriverFactory {
 
     private DriverFactory() {
-        // utility class
     }
 
     public static WebDriver createDriver(BrowserType browserType) {

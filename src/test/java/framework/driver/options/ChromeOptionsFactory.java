@@ -5,7 +5,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class ChromeOptionsFactory {
 
     private ChromeOptionsFactory() {
-        // utility class
     }
 
     public static ChromeOptions createDefault() {
