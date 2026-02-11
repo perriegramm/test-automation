@@ -19,7 +19,7 @@ public class DriverFactory {
         return switch (browserType) {
             case CHROME -> {
                 WebDriverManager.chromedriver().setup();
-                yield new ChromeDriver(ChromeOptionsFactory.createDefault());
+                yield new ChromeDriver(ChromeOptionsFactory.create());
             }
             case FIREFOX -> throw new UnsupportedOperationException("Firefox not implemented yet");
         };
