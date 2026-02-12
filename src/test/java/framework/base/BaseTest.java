@@ -29,6 +29,7 @@ public abstract class BaseTest {
         DriverManager.quitDriver();
     }
 
+    // TODO: consider replacing @Attachment with Allure.addAttachment for better control
     @SuppressWarnings("UnusedReturnValue")
     @Attachment(value = "Screenshot", type = "image/png")
     public byte[] attachScreenshot() {
