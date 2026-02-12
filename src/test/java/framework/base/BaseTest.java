@@ -9,7 +9,7 @@ public abstract class BaseTest {
 
     protected WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
         DriverManager.initDriver();
         driver = DriverManager.getDriver();
