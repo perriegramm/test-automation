@@ -29,14 +29,14 @@ public abstract class BaseTest {
         DriverManager.quitDriver();
     }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings("UnusedReturnValue")
     @Attachment(value = "Screenshot", type = "image/png")
     public byte[] attachScreenshot() {
         return ((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.BYTES);
     }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings("UnusedReturnValue")
     @Attachment(value = "Page source", type = "text/html")
     public String attachPageSource() {
         return driver.getPageSource();
