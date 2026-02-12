@@ -1,5 +1,6 @@
 package framework.driver.options;
 
+import framework.config.Config;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ChromeOptionsFactory {
@@ -7,16 +8,14 @@ public class ChromeOptionsFactory {
     private ChromeOptionsFactory() {
     }
 
-    public static ChromeOptions createDefault() {
+    public static ChromeOptions create() {
         ChromeOptions options = new ChromeOptions();
         applyBaseConfiguration(options);
-        return options;
-    }
 
-    public static ChromeOptions createHeadless() {
-        ChromeOptions options = new ChromeOptions();
-        applyBaseConfiguration(options);
-        options.addArguments("--headless=new");
+        if (Config.headless()) {
+            options.addArguments("--headless=new");
+        }
+
         return options;
     }
 
