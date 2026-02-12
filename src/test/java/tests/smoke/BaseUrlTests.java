@@ -5,9 +5,9 @@ import framework.config.Config;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static framework.meta.TestGroups.SMOKE;
+import static framework.meta.TestGroups.LOGIN;
 
-@Test(groups = SMOKE)
+@Test(groups = LOGIN)
 public class BaseUrlTests extends BaseTest {
 
     @Test(description = "Verify that base URL loads successfully")
