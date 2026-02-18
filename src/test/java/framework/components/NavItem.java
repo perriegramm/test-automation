@@ -1,9 +1,8 @@
 package framework.components;
 
 public enum NavItem {
-    HOME("/"),
-    SIGNUP_LOGIN("/login");
-
-    NavItem(String pageName) {
-    }
+    HOME,
+    LOGIN_SIGNUP,
+    PRODUCTS,
+    CART
 }
